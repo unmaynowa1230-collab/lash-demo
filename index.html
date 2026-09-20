@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>suhada ｜ 脱毛サロン</title>
+<meta name="description" content="仙台・泉中央の脱毛サロン suhada。痛みの少ない光脱毛、部位ごとの明朗会計、勧誘なし。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400&family=Zen+Kaku+Gothic+New:wght@300;400&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --iv:#FBF6F0;--bl:#F1DCD2;--pe:#E6C3B3;--au:#B8956A;--k:#3B322D;--g:#9A8B82;--l:#E9DDD4;
+  --min:'Noto Serif JP',serif;--jp:'Zen Kaku Gothic New',sans-serif;--en:'Cormorant Garamond',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--jp);font-weight:300;color:var(--k);background:var(--iv);line-height:2;font-size:14px;letter-spacing:.04em;-webkit-font-smoothing:antialiased;position:relative}
+/* 粒子：肌のきめ */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.28;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .4 0 0 0 0 .35 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.en{font-family:var(--en);font-style:italic;font-weight:300;letter-spacing:.1em}
+.vt{writing-mode:vertical-rl;letter-spacing:.5em}
+.in{max-width:1200px;margin:0 auto;padding:0 40px;position:relative;z-index:2}
+
+nav{position:fixed;inset:0 0 auto 0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:28px 40px;color:var(--k)}
+nav .logo{font-family:var(--en);font-style:italic;font-size:26px;letter-spacing:.06em}
+nav ul{display:flex;gap:36px;list-style:none;font-size:12px;letter-spacing:.24em}
+nav .r{font-size:12px;letter-spacing:.3em;border-bottom:1px solid currentColor;padding-bottom:2px}
+
+/* hero: 光 */
+.hero{position:relative;height:100vh;min-height:640px;overflow:hidden;display:grid;align-items:end}
+.hero .light{position:absolute;inset:-20%;background:
+  radial-gradient(60% 55% at 72% 38%,rgba(230,195,179,.85) 0,rgba(230,195,179,0) 60%),
+  radial-gradient(45% 45% at 22% 72%,rgba(241,220,210,.9) 0,rgba(241,220,210,0) 60%),
+  radial-gradient(30% 30% at 60% 85%,rgba(184,149,106,.25) 0,rgba(184,149,106,0) 60%);
+  filter:blur(30px)}
+.hero .ring{position:absolute;right:8vw;top:14vh;width:min(46vw,560px);aspect-ratio:1;border-radius:50%;border:1px solid rgba(184,149,106,.45)}
+.hero .ring::after{content:"";position:absolute;inset:14%;border-radius:50%;border:1px solid rgba(184,149,106,.25)}
+.hero h1{position:relative;z-index:2;font-family:var(--min);font-weight:200;font-size:clamp(120px,22vw,340px);line-height:.9;letter-spacing:-.02em;margin-left:-.06em;padding:0 0 40px 40px}
+.hero h1 small{display:block;font-family:var(--jp);font-weight:300;font-size:clamp(13px,1.1vw,16px);letter-spacing:.42em;margin-bottom:26px;margin-left:.1em;color:var(--g)}
+.hero .side{position:absolute;right:40px;bottom:48px;z-index:2;font-size:12px;color:var(--g)}
+.hero .price{position:absolute;left:40px;top:50%;transform:translateY(-50%);z-index:2;font-family:var(--en);font-style:normal;font-size:clamp(15px,1.4vw,18px);color:var(--au);letter-spacing:.14em;line-height:1.7}
+
+/* statement + arch */
+.st{padding:clamp(120px,15vw,200px) 0;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.st .arch{aspect-ratio:3/4;border-radius:999px 999px 0 0;overflow:hidden;background:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80') center/cover;position:relative}
+.st .arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(251,246,240,0) 70%,rgba(251,246,240,.5))}
+.st h2{font-family:var(--min);font-weight:300;font-size:clamp(26px,3.2vw,44px);line-height:1.7;letter-spacing:.12em;margin-bottom:30px}
+.st p{max-width:32em;color:#5A4F49;margin-bottom:1.5em}
+.st .three{margin-top:40px;border-top:1px solid var(--au)}
+.st .three div{padding:18px 0;border-bottom:1px solid var(--l);display:grid;grid-template-columns:3em 1fr;gap:18px;align-items:baseline}
+.st .three i{font-family:var(--en);font-style:italic;font-size:22px;color:var(--au)}
+.st .three b{font-weight:400;letter-spacing:.12em;display:block}
+.st .three span{font-size:12px;color:var(--g);display:block}
+
+/* price selector: 白い帯 */
+.sel{background:#fff;position:relative;overflow:hidden;padding:clamp(100px,14vw,180px) 0}
+.sel .glow{position:absolute;right:-10%;top:-20%;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(241,220,210,.9),rgba(241,220,210,0) 65%);filter:blur(20px)}
+.sel .in{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:start}
+.sel h2{font-family:var(--min);font-weight:200;font-size:clamp(40px,6vw,88px);letter-spacing:.06em;line-height:1.1;margin-bottom:24px}
+.sel .lead{color:var(--g);max-width:30em;margin-bottom:40px}
+.parts{border-top:1px solid var(--k)}
+.part{width:100%;display:grid;grid-template-columns:1fr auto auto;gap:20px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--l);text-align:left;transition:padding .25s,color .25s}
+.part span{font-size:16px;letter-spacing:.14em}
+.part small{font-family:var(--en);font-style:normal;font-size:16px;color:var(--g)}
+.part em{font-style:normal;width:22px;height:22px;border:1px solid var(--k);border-radius:50%;display:inline-block;position:relative;transition:background .25s}
+.part[aria-pressed="true"]{padding-left:12px;color:var(--au)}
+.part[aria-pressed="true"] em{background:var(--au);border-color:var(--au)}
+.part[aria-pressed="true"] small{color:var(--au)}
+.total{position:sticky;top:120px;padding-top:12px}
+.total .en{color:var(--au);display:block;margin-bottom:16px;font-size:14px}
+.total .rows{min-height:120px}
+.total .row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--l);font-size:13px}
+.total .empty{color:var(--g);font-size:13px}
+.total .sum{margin-top:26px;padding-top:18px;border-top:1px solid var(--k)}
+.total .sum span{display:block;font-size:12px;letter-spacing:.24em;color:var(--g);margin-bottom:4px}
+.total .sum b{font-family:var(--en);font-style:normal;font-weight:300;font-size:clamp(52px,6vw,84px);line-height:1;letter-spacing:-.01em}
+.total p{font-size:12px;color:var(--g);margin-top:16px}
+
+/* plans */
+.plans{padding:clamp(100px,14vw,180px) 0}
+.plans h2{font-family:var(--min);font-weight:200;font-size:clamp(40px,6vw,88px);letter-spacing:.06em;line-height:1;margin-bottom:60px}
+.plans .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--k)}
+.plan{padding:40px 32px 40px 0;border-right:1px solid var(--l);position:relative}
+.plan + .plan{padding-left:32px}
+.plan:last-child{border-right:0}
+.plan.hot::before{content:"いちばん人気";position:absolute;top:-1px;left:32px;font-size:11px;letter-spacing:.3em;color:var(--au);border-top:1px solid var(--au);padding-top:14px}
+.plan h3{font-family:var(--min);font-weight:300;font-size:22px;letter-spacing:.14em;margin-bottom:6px}
+.plan .sub{font-size:12px;color:var(--g);letter-spacing:.06em;margin-bottom:24px}
+.plan .y{font-family:var(--en);font-style:normal;font-size:clamp(34px,3.6vw,46px);line-height:1;margin-bottom:4px}
+.plan .y small{font-size:14px;color:var(--g);margin-left:6px}
+.plan .per{font-size:12px;color:var(--g);margin-bottom:26px}
+.plan ul{list-style:none;font-size:13px;color:#5A4F49}
+.plan li{padding:8px 0;border-top:1px solid var(--l)}
+
+/* photo band */
+.band{height:clamp(240px,40vw,520px);background:url('https://images.unsplash.com/photo-1604881991720-f91add269bed?auto=format&fit=crop&w=2400&q=80') center/cover;position:relative}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(251,246,240,.9) 0,rgba(251,246,240,0) 40%)}
+.band .q{position:absolute;left:40px;top:50%;transform:translateY(-50%);font-family:var(--min);font-weight:200;font-size:clamp(28px,4vw,56px);letter-spacing:.14em;line-height:1.6;z-index:2}
+
+/* info */
+.info{padding:clamp(100px,14vw,180px) 0;display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.info h3{font-family:var(--min);font-weight:300;font-size:22px;letter-spacing:.2em;margin-bottom:30px}
+.info dl{display:grid;grid-template-columns:7em 1fr;row-gap:12px}
+.info dt{color:var(--g);letter-spacing:.14em}
+.faq details{border-top:1px solid var(--l)}
+.faq details:last-child{border-bottom:1px solid var(--l)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 0;letter-spacing:.06em;display:flex;justify-content:space-between}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--en);font-style:normal;color:var(--au)}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:#5A4F49;padding:0 0 18px;font-size:13px}
+
+/* reserve */
+.rsv{position:relative;overflow:hidden;padding:clamp(120px,16vw,220px) 40px;text-align:center;background:linear-gradient(180deg,var(--iv),var(--bl))}
+.rsv .light{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:80vw;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.9),rgba(255,255,255,0) 60%);filter:blur(24px)}
+.rsv h2{position:relative;font-family:var(--min);font-weight:200;font-size:clamp(32px,5vw,72px);letter-spacing:.14em;line-height:1.5;margin-bottom:40px}
+.rsv a{position:relative;display:inline-block;font-size:12px;letter-spacing:.4em;border:1px solid var(--k);padding:18px 48px;transition:background .3s,color .3s}
+.rsv a:hover{background:var(--k);color:#fff}
+.rsv .en{position:relative;display:block;color:var(--g);margin-top:40px;font-size:13px}
+
+footer{padding:36px 40px;font-size:11px;color:var(--g);letter-spacing:.2em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;position:relative;z-index:2}
+
+@media (max-width:860px){
+  nav{padding:20px 22px}nav ul{display:none}
+  .in{padding:0 22px}
+  .hero h1{padding-left:22px;font-size:clamp(110px,30vw,200px)}.hero .side{right:22px}.hero .price{left:22px;top:auto;bottom:40vh;transform:none}
+  .hero .ring{right:-20vw;top:8vh;width:70vw}
+  .st,.sel .in,.info{grid-template-columns:1fr;gap:40px}
+  .st .arch{max-width:360px}
+  .total{position:static}
+  .plans .grid{grid-template-columns:1fr}.plan{border-right:0;border-bottom:1px solid var(--l);padding:32px 0}.plan + .plan{padding-left:0}
+  .band .q{left:22px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">suhada</a>
+  <ul><li><a href="#price">Price</a></li><li><a href="#plans">Plans</a></li><li><a href="#info">Access</a></li></ul>
+  <a href="#reserve" class="r">Reserve</a>
+</nav>
+
+<section class="hero">
+  <div class="light"></div>
+  <div class="ring"></div>
+  <div class="price en">1 area, from<br>¥2,200</div>
+  <h1><small>脱毛サロン ｜ 泉中央</small>素肌</h1>
+  <span class="side vt">ムダ毛のことを、考えない毎日へ。</span>
+</section>
+
+<section class="in st">
+  <div class="arch"></div>
+  <div>
+    <h2>痛くない。<br>高くない。<br>勧めない。</h2>
+    <p>脱毛サロンに「なんとなく怖い」があるのは知っています。だから、その理由を先になくしました。肌を冷やしながら照射する光脱毛。部位ごとに決まった料金。コースを勧めない接客。</p>
+    <p>まずは、気になる1か所から。</p>
+    <div class="three">
+      <div><i>01</i><div><b>痛みが少ない</b><span>初回の方の9割が「思ったより平気」と言います</span></div></div>
+      <div><i>02</i><div><b>部位ごとの明朗会計</b><span>当日の追加は一切ありません</span></div></div>
+      <div><i>03</i><div><b>勧誘しません</b><span>通い放題は、お得だと思ったときにだけ</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="price" class="sel">
+  <div class="glow"></div>
+  <div class="in">
+    <div>
+      <h2>部位を<br>選んでみる。</h2>
+      <p class="lead">1回あたりの料金です。複数選ぶと合計が出ます。同じ部位に通うなら、下の通い放題のほうが安くなることが多いです。</p>
+      <div class="parts" id="parts">
+        <button class="part" data-n="ワキ" data-p="2200" aria-pressed="false"><span>ワキ</span><small>¥2,200</small><em></em></button>
+        <button class="part" data-n="ひじ下" data-p="4400" aria-pressed="false"><span>ひじ下</span><small>¥4,400</small><em></em></button>
+        <button class="part" data-n="ひざ下" data-p="5500" aria-pressed="false"><span>ひざ下</span><small>¥5,500</small><em></em></button>
+        <button class="part" data-n="ひざ上" data-p="6600" aria-pressed="false"><span>ひざ上</span><small>¥6,600</small><em></em></button>
+        <button class="part" data-n="背中（上）" data-p="5500" aria-pressed="false"><span>背中（上）</span><small>¥5,500</small><em></em></button>
+        <button class="part" data-n="うなじ" data-p="3300" aria-pressed="false"><span>うなじ</span><small>¥3,300</small><em></em></button>
+        <button class="part" data-n="VIO" data-p="8800" aria-pressed="false"><span>VIO</span><small>¥8,800</small><em></em></button>
+        <button class="part" data-n="顔" data-p="6600" aria-pressed="false"><span>顔</span><small>¥6,600</small><em></em></button>
+      </div>
+    </div>
+    <div class="total" aria-live="polite">
+      <span class="en">Your estimate</span>
+      <div class="rows" id="rows"><div class="empty">左から部位を選ぶと、ここに料金が出ます。</div></div>
+      <div class="sum"><span>1回の合計</span><b id="sum">¥0</b></div>
+      <p>税込。初回は上記から20%オフです。</p>
+    </div>
+  </div>
+</section>
+
+<section id="plans" class="in plans">
+  <h2>通い放題</h2>
+  <div class="grid">
+    <div class="plan"><h3>1部位</h3><div class="sub">ワキ・うなじ・ひじ下など</div><div class="y">¥16,500<small>/ 6か月</small></div><div class="per">1回あたり ¥1,375〜（12回通った場合）</div><ul><li>選んだ1部位を6か月間 何度でも</li><li>3週間に1回のペース</li><li>途中解約は残り月数を返金</li></ul></div>
+    <div class="plan hot"><h3>3部位</h3><div class="sub">ワキ＋ひざ下＋ひじ下 など</div><div class="y">¥39,800<small>/ 6か月</small></div><div class="per">1回あたり ¥1,105〜（3部位×12回）</div><ul><li>好きな3部位を6か月間 何度でも</li><li>部位の変更は月1回まで</li><li>途中解約は残り月数を返金</li></ul></div>
+    <div class="plan"><h3>全身</h3><div class="sub">顔・VIOを含む</div><div class="y">¥98,000<small>/ 12か月</small></div><div class="per">1回あたり ¥4,083〜（24回通った場合）</div><ul><li>全身を12か月間 何度でも</li><li>顔・VIOも含みます</li><li>途中解約は残り月数を返金</li></ul></div>
+  </div>
+</section>
+
+<div class="band"><div class="q">効果が出たら、<br>途中でやめていい。</div></div>
+
+<section id="info" class="in info">
+  <div>
+    <h3>店舗案内</h3>
+    <dl>
+      <dt>店名</dt><dd>脱毛サロン suhada（すはだ）</dd>
+      <dt>住所</dt><dd>仙台市泉区泉中央1丁目 ○○ビル 3F</dd>
+      <dt>営業時間</dt><dd>11:00–20:00（最終受付 19:00）</dd>
+      <dt>定休日</dt><dd>火曜</dd>
+      <dt>電話</dt><dd>022-000-0000</dd>
+      <dt>駐車場</dt><dd>提携パーキング 2時間無料</dd>
+    </dl>
+  </div>
+  <div class="faq">
+    <h3>よくあるご質問</h3>
+    <details><summary>何回くらいで効果が出ますか</summary><p>多くの方が3〜4回目で「生えるのが遅くなった」と感じます。自己処理がほぼ不要になるまでは8〜12回が目安です。</p></details>
+    <details><summary>日焼けしていても受けられますか</summary><p>強い日焼けの直後は照射できません。2週間ほど空けて、赤みが引いてからご来店ください。</p></details>
+    <details><summary>生理中でも大丈夫ですか</summary><p>VIO以外は問題ありません。VIOは生理後のご予約をお願いしています。</p></details>
+    <details><summary>通い放題を途中でやめたら</summary><p>残り月数分を返金します。「効果が出たからもういい」は、いちばん良い終わり方だと思っています。</p></details>
+  </div>
+</section>
+
+<section id="reserve" class="rsv">
+  <div class="light"></div>
+  <h2>まずは、<br>1か所から。</h2>
+  <a href="#">無料カウンセリングを予約</a>
+  <span class="en">Counseling &amp; test shot, free.</span>
+</section>
+
+<footer><span>© suhada</span><span>Izumi-chuo, Sendai</span></footer>
+
+<script>
+(function(){
+  const sel=new Map(),rows=document.getElementById('rows'),sum=document.getElementById('sum');
+  const fmt=n=>'¥'+n.toLocaleString('ja-JP');
+  function render(){
+    if(!sel.size){rows.innerHTML='<div class="empty">左から部位を選ぶと、ここに料金が出ます。</div>';sum.textContent='¥0';return;}
+    let t=0,h='';sel.forEach((p,n)=>{t+=p;h+=`<div class="row"><span>${n}</span><span>${fmt(p)}</span></div>`;});
+    rows.innerHTML=h;sum.textContent=fmt(t);
+  }
+  document.querySelectorAll('.part').forEach(b=>b.addEventListener('click',()=>{
+    const on=b.getAttribute('aria-pressed')==='true';b.setAttribute('aria-pressed',String(!on));
+    on?sel.delete(b.dataset.n):sel.set(b.dataset.n,+b.dataset.p);render();
+  }));
+})();
+</script>
+</body>
+</html>
